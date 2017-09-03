@@ -54,7 +54,7 @@ function SignUp()
 		}
 	}
 }
-if(isset($_POST['submit']))
+if(isset($_POST['employee']))
 {
 	SignUp();
 }
