@@ -8,11 +8,7 @@ $con=new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
 if ($con->connect_errno) {
     echo "Failed to connect to MySQL: (" . $con->connect_errno . ") " . $con->connect_error;
 }
-/*$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
 
-$ID = $_POST['user'];
-$Password = $_POST['pass'];
-*/
 function SignIn()
 {
 	session_start();   //starting the session for user profile page
@@ -33,10 +29,10 @@ function SignIn()
 			echo "SORRY... YOU ENTERED WRONG ID AND PASSWORD... PLEASE RETRY...";
 		}
 	}else{
-		header("Location:admin_login.html");
+		header("Location:homepage.html");
 	}
 }
-if(isset($_POST['submit']))
+if(isset($_POST['admin']))
 {
 	SignIn();
 }
